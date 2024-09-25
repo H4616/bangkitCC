@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas CC 1</title>
+
+    <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+
+<!-- Js untuk notifikasi wellcome-->
+<script>
+  function showWelcomeNotification() {
+      var notification = document.createElement('div');
+      notification.classList.add('notification');
+
+      notification.innerHTML = `
+          <span>Halooo selamat datang di web OtoSport</span>
+          <button class="close-btn" onclick="closeNotification(this)">×</button>
+      `;
+
+      document.body.appendChild(notification);
+      setTimeout(function() {
+          notification.classList.add('show');
+      }, 100);
+
+      setTimeout(function() {
+          notification.classList.remove('show');
+          setTimeout(function() {
+              notification.remove();
+          }, 500);
+      }, 5000);
+  }
+
+  function closeNotification(button) {
+      var notification = button.parentElement;
+      notification.classList.remove('show');
+      setTimeout(function() {
+          notification.remove();
+      }, 500);
+  }
+
+  window.onload = function() {
+      showWelcomeNotification();
+  };
+</script>
+
+    <!-- Header Berisi Navbar untuk Navigasi Web 2.0-->
+    <header>
+        <!-- Jumbotron -->
+        <div class="Jumbotron">
+            <h1>OtoSport</h1>
+            <div class="marquee">
+              <p>
+              Kejar Hobi Mu Melebihi Kecepatan yang Tidak Tertandingi !!!
+              </p>
+            </div>
+            
+            <!-- Navigasi -->
+            <nav id="nav">
+                <ul>
+                  <li>
+                    <a href="#Mobil">Mobil</a>
+                  </li>
+                  <li>
+                    <a href="#Motor">Motor</a>
+                  </li>
+                  <li>
+                    <a href="#SukuCadang">Sukucadang</a>
+                  </li>
+                </ul>
+              </nav>
+
+        </div>
+
+        <!-- Slider Navbar -->
+      <div class="content">
+         <div id="slider">
+          <nav id="navbar">
+              <ul>
+                <li>
+                  <a href="#nav">Navigasi</a>
+                </li>
+                <li>
+                  <a href="https://maps.app.goo.gl/JRHLRAj34JiaGZB56">Lokasi</a>
+                </li>
+                <li>
+                  <a href="https://wa.me/6282137757978">Infooo</a>
+                </li>
+              </ul>
+          </nav>
+         </div>
+
+
+        <!-- Js untuk Membuat slider navigasi keluar -->
+         <script>
+          document.addEventListener("mousemove", function(event) {
+            var slider = document.getElementById("slider");
+        
+            // Mendapatkan lebar viewport
+            var viewportWidth = window.innerWidth;
+        
+            // Mendapatkan posisi X dari kursor
+            var cursorPositionX = event.clientX;
+        
+            // Jika kursor berada dalam jarak 50px dari tepi kanan layar
+            if (cursorPositionX >= viewportWidth - 200) {
+              slider.classList.add("show"); // Menambahkan class untuk menampilkan slider
+            } else {
+              slider.classList.remove("show"); // Menghilangkan slider jika kursor menjauh
+            }
+          });
+        </script>
+      </div>   
+        
+
+    </header>
+
+    <!-- Main BErisi Konten yang akan ditampilkan -->
+    <main>
+        <!-- Berisi Informasi dari konten -->
+        <Article>
+          <div id="content">
+            <article id="Motor" class="card">
+              <h2>MOTOR Indonesia</h2>
+              <img src="asset/img/gambar3.jpg" alt="Motor" class="featured-image" />
+              <p>
+                Sepeda motor adalah kendaraan bermotor roda dua yang banyak digunakan di berbagai negara, 
+                termasuk Indonesia. Sebagai alat transportasi yang praktis, sepeda motor menawarkan kemudahan mobilitas terutama 
+                di daerah perkotaan yang sering mengalami kemacetan. 
+                Pengendara sepeda motor dapat dengan mudah melewati jalanan sempit, 
+                sehingga waktu tempuh perjalanan menjadi lebih efisien.
+              </p>
+    
+              <p>
+                Selain itu, harga sepeda motor yang relatif terjangkau dibandingkan mobil, 
+                serta biaya operasional yang lebih rendah (seperti bahan bakar dan perawatan), 
+                menjadikan sepeda motor sebagai pilihan utama bagi banyak orang, baik untuk kebutuhan pribadi maupun pekerjaan. 
+                Ada berbagai jenis sepeda motor yang beredar di pasaran, mulai dari skuter, motor bebek, hingga motor sport, 
+                yang masing-masing memiliki fungsi dan keunggulannya tersendiri.
+              </p>
+
+              <p>
+                Namun, penggunaan sepeda motor juga memerlukan kewaspadaan tinggi, 
+                terutama terkait keselamatan berkendara. Helm, jaket pelindung, dan keterampilan berkendara yang baik 
+                sangat penting untuk meminimalkan risiko kecelakaan di jalan raya.
+                Secara keseluruhan, sepeda motor telah menjadi bagian penting dari kehidupan sehari-hari banyak orang, 
+                berperan dalam memudahkan mobilitas dan mengurangi masalah transportasi di kota-kota besar.
+
+              </p>
+            </article>
+    
+            <article id="Mobil" class="card">
+              <h2>Mobil</h2>
+              <img src="asset/img/Gambar2.jpg" alt="Mobil" class="featured-image" />
+              <p>
+                Mobil adalah salah satu kendaraan bermotor roda empat yang paling populer dan 
+                umum digunakan di seluruh dunia. Mobil menawarkan kenyamanan dan kapasitas lebih besar 
+                dibandingkan sepeda motor, sehingga cocok untuk perjalanan jarak jauh, bepergian bersama keluarga, 
+                atau membawa barang dalam jumlah yang lebih banyak.
+              </p>
+    
+              <p>
+                Terdapat berbagai jenis mobil di pasaran, mulai dari sedan, SUV, hatchback, hingga truk dan van, 
+                yang dirancang untuk memenuhi kebutuhan yang berbeda-beda. Mobil-mobil modern dilengkapi dengan fitur keamanan dan 
+                kenyamanan yang semakin canggih, seperti airbag, rem ABS, sensor parkir, hingga sistem navigasi. 
+                Mobil listrik dan hybrid juga mulai populer karena lebih ramah lingkungan dan efisien dalam penggunaan bahan bakar.
+              </p>
+
+              <p>
+                Selain kenyamanan, mobil memberikan perlindungan lebih terhadap cuaca buruk dan kondisi jalan yang tidak bersahabat, 
+                sehingga pengendara dan penumpang merasa lebih aman. 
+                Namun, kepemilikan mobil juga memerlukan biaya yang lebih besar, seperti bahan bakar, pajak, asuransi, 
+                serta perawatan rutin.
+              </p>
+
+              <p>
+                Meskipun mobil dapat meningkatkan kenyamanan dan mobilitas, pertumbuhan jumlah mobil di perkotaan 
+                seringkali menyebabkan kemacetan dan polusi udara. Oleh karena itu, banyak kota besar yang 
+                berupaya meningkatkan infrastruktur transportasi umum dan mengedukasi masyarakat mengenai penggunaan kendaraan yang 
+                lebih ramah lingkungan. Secara keseluruhan, mobil tetap menjadi salah satu kendaraan paling diminati karena multifungsi dan kenyamanannya.
+              </p>
+            </article>
+
+              <article id="SukuCadang" class="card">
+                <h2>Suku Cadang</h2>
+                <img src="asset/img/gambar1.jpg" alt="SukuCadang" class="featured-image" />
+                <p>
+                  Suku cadang otomotif adalah komponen-komponen yang membentuk dan mendukung kinerja kendaraan, 
+                  baik itu mobil maupun sepeda motor. Setiap kendaraan terdiri dari berbagai suku cadang yang saling bekerja sama untuk 
+                  memastikan kendaraan berjalan dengan lancar dan aman. 
+                  Suku cadang ini meliputi mesin, sistem rem, transmisi, suspensi, ban, serta komponen kelistrikan dan elektronik.
+                </p>
+      
+                <p>
+                  Suku cadang terbagi menjadi dua jenis utama: suku cadang asli (OEM - Original Equipment Manufacturer) 
+                  dan suku cadang aftermarket. Suku cadang asli diproduksi oleh pabrikan kendaraan atau mitranya, 
+                  sehingga kualitas dan kompatibilitasnya lebih terjamin. Sementara itu, suku cadang aftermarket diproduksi oleh pihak ketiga 
+                  dan sering kali memiliki harga yang lebih terjangkau, namun kualitasnya bisa bervariasi. Perawatan kendaraan secara rutin, 
+                  termasuk penggantian suku cadang yang aus atau rusak, sangat penting untuk menjaga performa kendaraan dan mencegah kerusakan lebih lanjut. 
+                  Misalnya, penggantian oli, filter udara, busi, dan rem secara berkala 
+                  dapat meningkatkan efisiensi bahan bakar serta memperpanjang usia pakai kendaraan.
+                </p>
+
+                <p>
+                  Di era modern, teknologi suku cadang otomotif terus berkembang. 
+                  Banyak komponen kendaraan kini mengadopsi teknologi canggih, seperti sensor, sistem injeksi elektronik, 
+                  dan baterai untuk kendaraan listrik, yang membuat kendaraan lebih efisien dan ramah lingkungan. 
+                  Dengan demikian, suku cadang otomotif berperan penting dalam mendukung keselamatan, kenyamanan, dan performa kendaraan, 
+                  serta memberikan kemudahan bagi pemilik kendaraan dalam menjaga mobilitasnya.
+                </p>
+              </article>
+        </Article>
+
+        <!-- Berisi Konton Di samping/Sebelah konten utama -->
+        <aside>
+          <article class="profile card">
+            <header>
+              <h2>Montir Ganteng</h2>
+              <p>Kota Jogjakarta</p>
+              <figure>
+                <img src="asset/img/gambar4.jpg" />
+                <figcaption>Jack</figcaption>
+              </figure>
+            </header>
+  
+            <section>
+              <h3>Informasi saya</h3>
+  
+              <table>
+                <tr>
+                  <th>Lokasi Prakik</th>
+                  <td>Indonesia</td>
+                </tr>
+                <tr>
+                  <th>Since Of</th>
+                  <td>1999</td>
+                </tr>
+                <tr>
+                  <th>Kode Telepon</th>
+                  <td>+62 228968979</td>
+                </tr>
+              </table>
+            </section>
+          </article>
+
+        </aside>
+        
+   
+    </main>
+
+    <!-- Footer Berisi tag -->
+    <footer>
+        <p> Otomotif Impian Bagi Semua Kalangan &#169; 2024, Otomotif </p>
+    </footer>
+    
+</body>
+</html>
